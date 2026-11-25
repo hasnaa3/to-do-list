@@ -2,6 +2,16 @@
 
 A task management web application designed to help users organize their daily activities, manage important tasks, and track their productivity through a clean and intuitive interface.
 
+## 🌐 Live Demo
+
+Try the live version of **MyDay – To-Do List App**:
+
+🔗 [View Live Demo](https://hasnaa3.github.io/to-do-list/)
+
+## 📂 GitHub Repository
+
+🔗 [View Source Code](https://github.com/hasnaa3/to-do-list)
+
 ## ✨ Features
 
 - **Task Management:** Add new tasks with a title, description, and due date.
