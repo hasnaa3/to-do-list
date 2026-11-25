@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Git Test -->
+    <aside>
+      <div class="heading">MyDay Web</div>
+      <ul>
+        <li>
+          <button class="aside-btn" id="btn-lists">
+            <img src="Icon.png" />My Day
+          </button>
+        </li>
+        <li>
+          <button class="aside-btn" id="btn-important">
+            <img src="star.png" />Important
+          </button>
+        </li>
+        <li>
+          <button class="aside-btn" id="btn-planned">
+            <img src="Icon (2).png" />Planned
+          </button>
+        </li>
+        <li>
+          <button class="aside-btn" id="btn-all">
+            <img src="Icon (3).png" />All Tasks
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="page page4">
+        <nav>
+          <div class="nav-left">
+            <div class="nav-square lightblue2">
+              <img style="padding: 12px" src="Icon (4).png" />
+            </div>
+            <div>
+              <h2>My Day</h2>
+              <p class="date">Thursday, Oct 7</p>
+            </div>
+          </div>
+
+          <div style="display: flex">
+            <button id="moon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                  fill="#323232"
+                  d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"
+                />
+              </svg>
+            </button>
+            <button class="add openModalBtn">+ Add Task</button>
+          </div>
+        </nav>
+
+        <div class="impo-sec">
+          <div class="progress">
+            <p>Today's progress</p>
+            <span>0 of 2 completed</span>
+
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Client meeting preparation</p>
+                <p class="smaller">Work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Front End Campus</p>
+                <p class="smaller">Work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page2">
+        <nav>
+          <div class="nav-left">
+            <div class="nav-square yellow">
+              <img style="padding: 12px" src="Icon (5).png" />
+            </div>
+            <div>
+              <h2>Important</h2>
+              <p class="date">tasks starred</p>
+            </div>
+          </div>
+          <button class="add openModalBtn">+ Add Task</button>
+        </nav>
+
+        <div class="impo-sec">
+          <div class="progress">
+            <p>Progress</p>
+            <span>0 of 5 completed</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page3">
+        <nav>
+          <div class="nav-left">
+            <div class="nav-square lightblue">
+              <img style="padding: 12px" src="Icon (6).png" />
+            </div>
+            <div>
+              <h2>Planned</h2>
+              <p class="date">9 tasks scheduled</p>
+            </div>
+          </div>
+          <button class="add openModalBtn">+ Add Task</button>
+        </nav>
+
+        <div class="planned">
+          <div class="overdue">Overdue <span>3</span></div>
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Design new landing page</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Fix critical bug in production</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Buy groceries</p>
+                <p class="smaller">Personal</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="today">Today <span>2</span></div>
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Client meeting preparation</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Front End Campus</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="tomorrow">Tomorrow <span>1</span></div>
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Review pull requests</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="tomorrow">This Week <span>3</span></div>
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Update document</p>
+                <p class="smaller">work</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">schedule dentist appointment</p>
+                <p class="smaller">Personal</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+
+          <div class="task-row">
+            <div class="task-left">
+              <div><input type="checkbox" /></div>
+              <span>
+                <p class="larger">Plan weekend trip</p>
+                <p class="smaller">Personal</p>
+              </span>
+            </div>
+            <button class="filled imgBtn">
+              <img src="Icon (1).png" width="35px" style="display: none" />
+            </button>
+            <button class="nocolor imgBtn">
+              <img src="star.png" width="35px" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page1">
+        <nav>
+          <div class="nav-left">
+            <div class="nav-square blue">
+              <img style="padding: 12px" src="Icon (7).png" />
+            </div>
+            <div>
+              <h2>All Tasks</h2>
+              <p class="date">11 total . 2 completed</p>
+            </div>
+          </div>
+          <button class="add openModalBtn">+ Add Task</button>
+        </nav>
+
+        <div class="list">
+          <button class="btnlist">All</button>
+          <button class="btnlist">Work</button>
+          <button class="btnlist">Personal</button>
+        </div>
+
+        <div class="week">Work <span>8</span></div>
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Design new landing page</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Review pull requests</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Update documentation</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Fix critical bug in production</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Setup pipeline</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Client meeting preparation</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Read monthly reports</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Front End Campus</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="week">Personal <span>3</span></div>
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Buy groceries</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">schedule dentist appointment</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+
+        <div class="task-row">
+          <div class="task-left">
+            <div><input type="checkbox" /></div>
+            <p class="larger">Plan weekend trip</p>
+          </div>
+          <button class="filled imgBtn">
+            <img src="Icon (1).png" width="35px" style="display: none" />
+          </button>
+          <button class="nocolor imgBtn">
+            <img src="star.png" width="35px" />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="overlay">
+      <div class="model">
+        <button class="closeBtn">
+          <img src="Icon (8).png" width="20px" />
+        </button>
+        <h2>Add New Task</h2>
+        <p style="margin-bottom: 20px">
+          Create a new task with details like priority, tags, and due date
+        </p>
+        <label style="font-weight: 600"
+          >Title <span style="color: red">*</span></label
+        ><br />
+        <input
+          class="title"
+          type="text"
+          placeholder="what do you want to do?"
+        /><br />
+        <p style="color: gray; font-size: 15px; margin-bottom: 20px">
+          Press Enter to add, Shift+Enter to add and stay open
+        </p>
+        <label style="font-weight: 600">Description</label><br />
+        <textarea placeholder="Add more details..." class="des"></textarea
+        ><br /><br />
+        <label>Due Date</label><br />
+        <input class="due" type="date" /><br />
+        <p style="color: gray; font-size: 15px">
+          Pick a date or choose Today / Tomorrow
+        </p>
+        <br />
+
+        <label class="prio">Priority</label>
+        <div
+          style="
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            background-color: #f5f5f5;
+            border: 0.8px solid grey;
+            border-radius: 8px;
+            padding: 5px;
+          "
+        >
+          <button
+            type="button"
+            style="flex: 1; padding: 10px; border: none; background: #f5f5f5"
+          >
+            Low
+          </button>
+          <button
+            type="button"
+            style="
+              flex: 1;
+              padding: 10px;
+              border-radius: 8px;
+              border: none;
+              background: #f5f5f5;
+              background: #f2e8d0;
+            "
+          >
+            Medium
+          </button>
+          <button
+            type="button"
+            style="
+              flex: 1;
+              padding: 10px;
+              border-radius: 8px;
+              border: none;
+              background: #f5f5f5;
+            "
+          >
+            High
+          </button>
+        </div>
+
+        <label
+          style="
+            font-weight: 600;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+          "
+          >Tags</label
+        >
+
+        <input
+          list="tagOptions"
+          id="tags"
+          name="tags"
+          placeholder="Add tags..."
+          style="
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          "
+        />
+
+        <datalist id="tagOptions">
+          <option value="To Do"></option>
+          <option value="In Progress"></option>
+          <option value="Under review"></option>
+          <option value="Blocked"></option>
+          <option value="Completed"></option>
+        </datalist>
+        <p style="color: gray; font-size: 15px; margin-bottom: 50px">
+          Press Enter to add tag. Max 6 tags.
+        </p>
+
+        <hr />
+        <div
+          style="
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+            margin: 10px;
+          "
+        >
+          <button
+            style="
+              background-color: #22c55e;
+              color: white;
+              border: none;
+              padding: 10px 18px;
+              border-radius: 8px;
+              font-weight: bold;
+              flex: 3;
+            "
+          >
+            Add Task
+          </button>
+
+          <button
+            style="
+              background: none;
+              border: none;
+              color: gray;
+              font-weight: 600;
+              border: 1px solid grey;
+              border-radius: 7px;
+              padding: 10px;
+              font-weight: bold;
+            "
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

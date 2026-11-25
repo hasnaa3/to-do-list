@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+aside {
+  width: 17%;
+  min-height: 100vh;
+  background: #FAFAFA;
+  border-right: 0.8px solid grey;
+}
+.heading {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  border-bottom: 0.8px solid grey;
+  padding: 24px;
+}
+.aside-btn {
+  border: none;
+  background: #FAFAFA;
+  cursor: pointer;
+  font-size: 16px;
+}
+li {
+  list-style: none;
+  padding: 20px;
+}
+main {
+  width: 83%;
+  padding: 20px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-square {
+  width: 50px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blue {
+     background: #0e60af; 
+    }
+.yellow {
+     background: #ffb500;
+     }
+.lightblue { 
+    background: #0d8ce9; 
+}
+.lightblue2 {
+     background: #3ea5f5;
+     }
+.add {
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  width: 155px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 12px;
+}
+.list {
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  background: #FAFAFA;
+  padding: 10px;
+  margin: 30px 0;
+}
+.btnlist {
+  border: none;
+  background: #FAFAFA;
+  cursor: pointer;
+  padding: 3px 10px;
+}
+.btnlist:hover {
+  background: white;
+}
+.overdue, .today, .tomorrow, .week {
+  font-size: 18px;
+  padding: 6px 0;
+}
+.overdue { 
+    color: rgb(179,7,7);
+    padding: 25px 0 8px 8px;
+}
+.today {
+    color: rgb(54,172,246); 
+    }
+.tomorrow, .week { 
+    color: black;
+}
+
+.overdue span,
+.today span,
+.tomorrow span,
+.week span {
+  background: #F5F5F5;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border: 0.8px solid rgb(186,183,183);
+  border-radius: 8px;
+  height: 70px;
+  padding: 20px;
+  margin-bottom: 13px;
+  align-items: center;
+}
+.task-left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.task-row img {
+  width: 35px;
+  height: 35px;
+}
+.task-row .larger {
+  transition: all 0.3s ease;
+}
+.progress {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border: 0.8px solid rgb(186,183,183);
+  border-radius: 8px;
+  height: 60px;
+  padding: 20px;
+  margin: 28px 0;
+  align-items: center;
+}
+.progress-container{
+    width: 60%;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 8px;
+    margin: 20px auto;
+}
+.progress-bar{
+    width: 20%;
+    height: 80%;
+    background-color: black;
+}
+.larger{
+    font-size: 18px;
+}
+.smaller{
+  color: grey;
+    font-size: 13px;
+}
+.page {
+    display: none;
+    }
+
+.overlay{
+  border: 0.8px solid grey;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+.closeBtn{
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  cursor: pointer;
+}
+.title , .des , .due{
+  border: 0.7px solid grey;
+  border-radius: 6px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+.des{
+  height: 70px;
+}
+.prio{
+  font-weight: 600;
+  display:block; 
+  margin-top:15px;
+}
+button{
+  cursor: pointer;
+}
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+.model {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 80vh;  
+  overflow-y: auto;  
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+  .closeBtn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .title, .des, .due {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .des {
+    height: 70px;
+  }
+#moon{
+  width: 35px;
+  background-color: white; 
+  border: none;
+  margin-right: 15px;
+}
+.filled ,.nocolor{
+ border: none;
+ background-color: white;
+}
